@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+	<title>Reservas</title>
+</head>
+<body>
+	<div class="gridReservas">
+		<header class="encabezado">
+			<nav class="encabezado--menu">
+				<ul>
+					<li><a href="../index.html"> Inicio </a></li>
+					<li><a href="reservas.html">Reservas</a></li>
+					<li><a href="contacto.html">Contacto </a></li>
+					<li><a href="nuestracarta.html">Nuestra Carta</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="logoNombre">
+			<div class="logoSecundario">
+				<img src="../assets/img/logobar.png" alt="logo">
+			</div>
+			<div class="nombreBar">
+				<p>Mono Bar</p> 
+			</div>		
+		</div>
+		<div class="principalReservas">
+			<h1 class="principalReservas--titulosecundario">Reservas</h1>
+			<p class="principalReservas--subtitulo">Completa todos los campos para que podamos contactarte</p>
+		</div>
+		<form class="reservas">
+			<div class="reservas--fecha">
+				<label for="fecha">Selecciona Fecha:</label> 
+				<input type="date" id="fecha" name="fecha"><br>
+			</div>
+			<div class="reservas--motivo">
+				<p>Motivo:</p> 
+				<input type="radio" name="motivo" id="cumpleaños">
+				<label class="cumpleaños" for="cumpleaños">Cumpleaños</label>
+				<input type="radio" name="motivo" id="cena">
+				<label class="cena" for="cena">Cena</label>
+				<input type="radio" name="motivo" id="evento">
+				<label class="evento" for="evento">Evento</label>
+				<input type="radio" name="motivo" id="otro">
+				<label class="otro" for="otro">Otro</label>
+			</div>
+			<div class="reservas--cantidad">
+				<label for="personas">Cantidad de personas</label>
+				<input type="number" id="personas" name="personas">
+			</div>
+			<div class="reservas--telefono">
+				<label for="telefono">Telefono</label>
+				<input type="text" id="telefono" name="telefono">
+			</div>
+			<div class="reservas--email">
+				<label for="email">E-Mail </label>
+				<input type="text" id="email" name="email">
+			</div>
+			<div class="reservas--boton">
+				<input type="submit" name="enviar">
+			</div>
+		</form>		
+		<footer class="pie">
+			<div class="pie--menu">
+				<ul>
+					<li><a href="../index.html"> Inicio </a></li>
+					<li><a href="reservas.html">Reservas</a></li>
+					<li><a href="contacto.html">Contacto </a></li>
+					<li><a href="nuestracarta.html">Nuestra Carta</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+				</ul>	
+			</div>
+			<div class="pie--logo">
+				<a href="../index.html"> <img src="../assets/img/logofooter.png" alt="logo"> </a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1435 @@
+/*-----------Vista Desktop----------------*/
+
+@media screen and (min-width: 1024px){
+
+	.gridIndex {
+		display: grid;
+		grid-template-columns: 20% auto;
+		grid-template-rows: auto auto auto auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas:
+		"logo encabezado"
+		"principal principal"
+		"imagenBar imagenBar"
+		"ubicacion ubicacion"
+		"mediosPago mediosPago"
+		"redes redes"
+		"suscripcion suscripcion"
+		"footer footer";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	/*---------HEADER---------*/
+
+	.encabezado {
+		grid-area: encabezado;
+		display: flex;
+		justify-content: right;
+	}
+
+	.encabezado--menu {
+		display: flex;
+		align-self: center;
+		justify-self: right;
+		margin-right: 10%;
+	}
+
+	nav.encabezado--menu ul li {
+		display: inline-block;
+		font-family: 'Montserrat' , sans-serif;
+		font-size: 15px;
+		padding: 15px;
+		text-transform: uppercase;
+		border-color: steelblue;
+		border-right-style: dotted;
+	}
+
+	nav.encabezado--menu ul li a, .pie--menu ul li a {
+		font-weight: bold;
+		text-decoration: none;
+		color: black;
+	}
+
+	.logo {
+		grid-area: logo;
+		display: grid;
+		margin: 10px;
+	}
+
+	.logo img {
+		margin: auto;
+	}
+
+
+	/*-------------------*/
+
+	/*-------Principal Index---------*/
+
+	.principalIndex {
+		grid-area: principal;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"tituloPrincipal"
+		"descripcion";
+		justify-items: center;
+	}
+
+	.principalIndex--titulo {
+		grid-area: tituloPrincipal;
+		font-family: 'Cinzel', serif;
+		font-size: 85px;
+		color: steelblue;
+		margin-bottom: 20px;
+	    margin-top: 20px;
+	}
+
+	.principalIndex p {
+		grid-area: descripcion;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.fotoBar {
+		grid-area: imagenBar;
+		display: grid;
+	}
+
+	.fotoBar--foto {
+		width: 90%;
+		margin: auto;
+	}
+
+	/*-------------------------*/
+
+	/*-------Ubicacion----------*/
+
+	.ubicacionIndex {
+		grid-area: ubicacion;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"subtituloUbicacion"
+		"mapa";
+	}
+
+	.ubicacionIndex h3 {
+		grid-area: subtituloUbicacion;
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		margin-top: 30px;
+	}
+
+	.ubicacionIndex--mapa {
+		grid-area: mapa;
+		margin: auto;
+	}
+
+	/*-------------------------*/
+
+	/*-------Medios de pago---------*/
+
+	.mediospago {
+		grid-area: mediosPago;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"subtituloMediospago"
+		"mediosPago";
+		align-items: center;
+	}
+
+	.mediospago h3 {
+		grid-area: subtituloMediospago;
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		margin-top: 30px;
+	}
+
+	.mediospago--imagen {
+		grid-area: mediosPago;
+		width: 400px;
+		height: 180px;
+		margin: 20px auto 20px auto;
+	}
+
+	/*--------------------------*/
+
+	/*----------Redes-----------*/
+
+	.redes {
+		grid-area: redes;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"facebook instagram whatsapp";
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.redes--facebook {
+		grid-area: facebook;
+		display: flex;
+		justify-self: end;
+		align-items: center;
+	}
+
+	.redes--instagram {
+		grid-area: instagram;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.redes--whatsapp {
+		grid-area: whatsapp;
+		display: flex;
+		justify-self: start;
+		align-items: center;
+	}
+
+	.redes--facebook p, .redes--instagram p, .redes--whatsapp p {
+		margin-right: 10px;
+	}
+
+	/*-------------------------*/
+
+	/*------Suscripcion--------*/
+
+	.suscripcion {
+		grid-area: suscripcion;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+		"subtituloSuscripcion"
+		"ingresarEmail"
+		"botonSuscribir";
+		align-items: center;
+	}
+
+	.suscripcion h3 {
+		grid-area: subtituloSuscripcion;
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+	}
+
+	.suscripcion--ingresardatos {
+		grid-area: ingresarEmail;
+		height: 30px;
+		width: 300px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 8px;
+		margin: auto;
+	}
+
+	.suscripcion--boton {
+		grid-area: botonSuscribir;
+		height: 25px;	
+		width: 100px;
+		margin: 10px auto 10px auto;
+		font-weight: bold;
+	}
+
+	/*-------------------------*/
+
+	/*--------Footer-----------*/
+
+	.pie {
+		grid-area: footer;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"navfooter"
+		"logofooter";
+	}
+
+	.pie--menu {
+		grid-area: navfooter;
+		display: flex;
+		justify-content: center;
+	}
+
+	.pie--menu ul {
+		padding-left: 0px;
+	}
+
+	.pie--menu ul li {
+		display: inline-block;
+		font-family: 'Montserrat' , sans-serif;
+		font-size: 10px;
+		padding: 15px;
+		text-transform: uppercase;
+		border-color: steelblue;
+		border-right-style: dotted;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.pie--logo {
+		grid-area: logofooter;
+		display: grid;
+		justify-self: center;
+		margin-top: 15px;
+	}
+
+	/*------------------------------Galeria--------------------------------*/
+
+	.gridGaleria {
+		display: grid;
+		grid-template-columns: 20% auto;
+		grid-template-rows: auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre encabezado"
+		"tituloPrincipal tituloPrincipal"
+		"galeria galeria"
+		"enviarFoto enviarFoto"
+		"footer footer";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.logoNombre {
+		grid-area: logoNombre;
+		display: grid;
+		margin: 10px;
+	}
+
+	.logoSecundario {
+		display: grid;
+	}
+
+	.logoNombre img {
+		margin: auto;
+	}
+
+	.nombreBar {
+		display: flex;
+    	justify-content: center;
+    	font-family: 'Cinzel', sans-serif;
+	} 
+
+	.principalGaleria {
+		grid-area: tituloPrincipal;
+		display: grid;
+	}
+
+	.principalGaleria h1 {
+		font-family: 'Cinzel', serif;
+		display: flex;
+		justify-content: center;
+		font-size: 50px;
+		color: #76448A;
+	}
+
+	.galeria {
+		grid-area: galeria;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"foto1 foto2 foto3"
+		"foto4 foto5 foto6";
+		grid-row-gap: 30px;
+	}
+
+	.foto1 {
+		grid-area: foto1;
+	    display: grid;
+	}
+
+	.foto2 {
+		grid-area: foto2;
+		 display: grid;
+	}
+
+	.foto3 {
+		grid-area: foto3;
+	    display: grid;
+	}
+
+	.foto4 {
+		grid-area: foto4;
+		display: grid;
+	}
+
+	.foto5 {
+		grid-area: foto5;
+		display: grid;
+	}
+
+	.foto6 {
+		grid-area: foto6;
+		display: grid;
+	}
+
+	.foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img, .foto6 img {
+		width: 95%;
+		height: 95%;
+		margin: auto;
+	}
+
+	.enviarFoto {
+		grid-area: enviarFoto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	.enviarFoto--titulo {
+		display: flex;
+		font-family: 'Cinzel', sans-serif;
+		text-transform: uppercase;
+		color: #76448A;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.enviarFoto--envio input {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+	}
+
+	/*-------------------------------------------------------------------------------------*/
+
+	/*--------------------------------------Contacto--------------------------------------*/
+
+	.gridContacto {
+		display: grid;
+		grid-template-columns: 20% auto;
+		grid-template-rows: auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre encabezado"
+		"tituloPrincipal tituloPrincipal"
+		"formulario formulario"
+		"ubicacion ubicacion"
+		"footer footer";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.encabezado {
+		grid-area: encabezado;
+	}
+
+	.logoNombre {
+		grid-area: logoNombre;
+	}
+
+	.principalContacto {
+		grid-area: tituloPrincipal;
+		display: grid;
+		justify-content: center;
+	}
+
+	.principalContacto--titulosecundario  {
+		display: flex;
+		justify-content: center;
+		font-family: 'Cinzel', serif;
+		font-size: 50px;
+		color: #117A65;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.principalContacto--subtitulo {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+	}
+
+	.contacto {
+		grid-area: formulario;
+		margin-bottom: 40px;
+	}
+
+	.contacto--form {
+		display: grid;
+		grid-row-gap: 15px;
+		justify-content: center;
+	}
+
+	.contacto input {
+		height: 20px;
+		width: 200px;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 5px;
+		border-style: none;
+		margin: auto;
+	}
+
+	.contacto textarea {
+		width: 200px;
+		height: 80px;
+		border-radius: 5px;
+		border-style: none;
+		font-family: 'Montserrat', sans-serif;
+		resize: none;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	.contacto--suscripcion {
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 10px;
+	}
+
+	.contacto--boton {
+		height: 30px;
+		width: 80px;
+		font-family: 'Montserrat';
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: #117A65;
+		border-radius: 5px;
+		margin-top: 20px;
+	}
+
+	.contactoUbicacion {
+		grid-area: ubicacion;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"datos mapa";
+		margin: 20px 20px 40px 20px;
+	}
+
+	.contactoUbicacion--datos {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas: 
+		"subtitulo direccion"
+		"nada horarios"
+		"nada horarios2"
+		"nada horarios3";
+	}
+
+	.contactoUbicacion--datos .renglon0 {
+		grid-area: subtitulo;
+		display: flex;
+    	justify-content: flex-end;
+    	align-items: center;
+    	font-size: 18px;
+    	margin: 0;
+    	font-weight: bold;
+    	font-family: 'Montserrat';
+	}
+
+	.contactoUbicacion--datos .renglon1 {
+		grid-area: direccion;
+	}
+
+	.contactoUbicacion--datos .renglon2 {
+		grid-area: horarios;
+	}
+
+	.contactoUbicacion--datos .renglon3 {
+		grid-area: horarios2;
+	}
+
+	.contactoUbicacion--datos .renglon4 {
+		grid-area: horarios3;
+	}
+
+	.renglon1, .renglon2, .renglon3, .renglon4 {
+		align-items: center;
+    	display: flex;
+    	margin: 0 0 0 5px;
+   		font-size: 18px;
+    	font-family: 'Montserrat';
+	}
+
+	.contactoUbicacion--mapa {
+		display: grid;
+	}
+
+	.contactoUbicacion--mapa iframe {
+		margin: auto;
+		height: 90%;
+	}
+
+	.pie {
+		grid-area: footer;
+	}
+
+	/*-----------------------------------Reservas--------------------------------------*/
+
+	.gridReservas {
+		display: grid;
+		grid-template-columns: 20% auto;
+		grid-template-rows: auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre encabezado"
+		"tituloPrincipal tituloPrincipal"
+		"formulario formulario"
+		"footer footer";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.principalReservas {
+		grid-area: tituloPrincipal;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.principalReservas--titulosecundario {
+		font-family: 'Cinzel', serif;
+		font-size: 50px;
+		color: #9A7D0A;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.principalReservas--subtitulo {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.reservas {
+		grid-area: formulario;
+		display: grid;
+		font-family: 'Montserrat', sans-serif;
+		grid-row-gap: 15px;
+		margin: auto;
+	}
+
+	.reservas--fecha, .reservas--telefono, .reservas--cantidad, .reservas--email {
+		text-align: center;
+	}
+
+	#fecha, #telefono, #email, #personas {
+		color: #873600;
+		font-size: 14px;
+		border-radius: 3px;
+		border: hidden;
+	}
+
+	.reservas--motivo {
+		display: flex;
+		align-items: center;
+	}
+
+	.reservas--motivo input {
+		margin: 0 1px 0 5px;
+	}
+
+	#personas {
+		width: 50px;
+	}
+
+	.reservas--boton {
+		display: grid;
+	    justify-content: center;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	}
+
+	.reservas--boton input {
+		height: 30px;
+		width: 80px;
+		font-family: 'Montserrat';
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: #9A7D0A;
+		border-radius: 5px;
+		border: hidden;
+	}
+
+	/*------------------------Carta-------------------------*/
+
+	.gridCarta {
+		display: grid;
+		grid-template-columns: 20% auto;
+		grid-template-rows: auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre encabezado"
+		"tituloPrincipal tituloPrincipal"
+		"carta carta"
+		"delivery delivery"
+		"footer footer";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.principalCarta {
+		grid-area: tituloPrincipal;
+	}
+
+	.principalCarta h1 {
+		font-family: 'Cinzel', serif;
+		display: flex;
+		justify-content: center;
+		font-size: 50px;
+		color: #E74C3C;
+	}
+
+	.carta {
+		grid-area: carta;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+		"imagenComidas imagenBebidas imagenPostres"
+		"comidas bebidas postres"
+		". bebidas .";
+		justify-content: center;
+		grid-gap: 20px;
+		margin: 20px;
+	}
+
+	.comidas--imagen {
+		grid-area: imagenComidas;
+	}
+
+	.comidas--imagen img, .bebidas--imagen img, .postres--imagen img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.comidasCarta {
+		grid-area: comidas;	
+	}
+
+	.comidas--tabla, .bebidas--tabla, .postres--tabla {
+		width: 70%;
+		margin: auto;
+	}
+
+	.nombre {
+		width: 50%;
+		text-align: start;
+	}
+
+	.precios {
+		width: 50%;
+		text-align: end;
+	}
+
+	.bebidas--imagen {
+		grid-area: imagenBebidas;
+	}
+
+	.bebidasCarta {
+		grid-area: bebidas;
+	}
+
+	.postres--imagen {
+		grid-area: imagenPostres;
+	}
+
+	.postresCarta {
+		grid-area: postres;
+	}
+
+	.comidasCarta, .bebidasCarta, .postresCarta {
+		display: flex;
+	    flex-direction: column;
+	    text-align: center;
+	    font-family: 'Montserrat', sans-serif;
+	}
+
+	.delivery {
+		grid-area: delivery;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 20px auto 20px auto;
+		font-family: 'Cinzel', serif;
+		color: #E74C3C;
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+
+	/*-------------Index-------------*/
+
+	.gridIndex {
+		display: grid;
+		grid-template-columns: 70% 30%;
+		grid-template-rows: auto auto auto auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas:
+		"nombre logo"
+		"encabezado encabezado"
+		"imagenBar imagenBar"
+		"ubicacion ubicacion"
+		"mediosPago mediosPago"
+		"redes redes"
+		"suscripcion suscripcion"
+		"logoFooter logoFooter";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	} 
+
+	.logo {
+		grid-area: logo;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.principalIndex {
+		grid-area: nombre;
+		display: flex;
+		align-items: center;
+		font-family: 'Cinzel', serif;
+		color: steelblue;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.principalIndex--titulo {
+		display: flex;
+		justify-content: center;
+	}
+
+	.principalIndex p {
+		display: none;
+	}
+
+	.encabezado {
+		grid-area: encabezado;
+		display: flex;
+		justify-content: center;
+	}
+
+	.encabezado--menu ul {
+		list-style-type: none;
+		text-align: center;
+		padding: 0;
+	}
+
+	.encabezado--menu ul li {
+		font-family: 'Montserrat' , sans-serif;
+		font-size: 15px;
+		padding: 8px;
+		text-transform: uppercase;
+	}
+
+	.encabezado--menu ul li a {
+		font-weight: bold;
+		text-decoration: none;
+		color: black;
+		border-bottom: solid 1px;
+	}
+
+	.fotoBar {
+		grid-area: imagenBar;
+		display: grid;
+		padding: 20px;
+	}
+
+	.fotoBar--foto {
+		width: 100%;
+	}
+
+	.ubicacionIndex {
+		grid-area: ubicacion;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"titulo"
+		"mapa"
+	}
+
+	.ubicacionIndex h3 {
+		grid-area: titulo;
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+
+	.ubicacionIndex--mapa {
+		grid-area: mapa;
+		margin: 15px auto 15px auto;
+		width: 80%;
+
+	}
+
+	.mediospago {
+		grid-area: mediosPago;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"titulo"
+		"mediospago";
+		grid-row-gap: 10px;
+		margin-bottom: 25px;
+	}
+
+	.mediospago h3 {
+		grid-area: titulo;
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+
+	.mediospago--imagen {
+		grid-area: mediospago;
+		width: 50%;
+		margin: auto;
+	}
+
+	.redes {
+		grid-area: redes;
+		display: grid;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		grid-row-gap: 15px;
+	}
+
+	.redes--facebook, .redes--instagram, .redes--whatsapp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.redes--facebook p, .redes--instagram p, .redes--whatsapp p {
+		   margin-right: 10px;
+    	font-family: 'Montserrat';
+    	font-weight: bold;
+	}
+
+	.suscripcion {
+		grid-area: suscripcion;
+		display: grid;
+		grid-row-gap: 15px;
+	}
+
+	.suscripcion h3 {
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+	}
+
+	.suscripcion--ingresardatos {
+		width: 50%;
+		height: 20px;
+		margin: auto;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 8px;
+
+	}
+
+	.suscripcion--boton {
+		width: 25%;
+		margin: auto;
+		font-weight: bold;
+	}
+
+	.pie {
+		grid-area: logoFooter;
+		display: flex;
+    	justify-content: center;
+    	margin: 15px;
+	}
+
+	.pie--menu {
+		display: none;
+	}
+
+	/*------------Galeria-------------*/
+
+	.gridGaleria {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre" 
+		"encabezado"
+		"tituloPrincipal"
+		"galeria "
+		"enviarFoto"
+		"logoFooter";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.logoNombre {
+		grid-area: logoNombre;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"nombre logo";
+		margin-top: 20px;
+	}
+
+	.logoSecundario {
+		grid-area: logo;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nombreBar {
+		grid-area: nombre;
+		display: flex;
+		align-items: center;
+		font-family: 'Cinzel', serif;
+		font-size: 40px;
+		color: steelblue;
+		justify-content: center;
+	}
+
+	.encabezado {
+		grid-area: encabezado;
+	}
+
+	.principalGaleria {
+		grid-area: tituloPrincipal;
+		display: flex;
+		justify-content: center;
+	}
+
+	.principalGaleria h1 {
+		font-family: 'Cinzel', serif;
+		font-size: 35px;
+		color: #76448A;
+	}
+
+	.galeria {
+		grid-area: galeria;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+		"foto1 foto2"
+		"foto3 foto4"
+		"foto5 foto6";
+		grid-row-gap: 10px;
+	}
+
+	.foto1 {
+		grid-area: foto1;
+		display: grid;
+	}
+
+	.foto2 {
+		grid-area: foto2;
+		display: grid;
+	}
+
+	.foto3 {
+		grid-area: foto3;
+		display: grid;
+	}
+
+	.foto4 {
+		grid-area: foto4;
+		display: grid;
+	}
+
+	.foto5 {
+		grid-area: foto5;
+		display: grid;
+	}
+
+	.foto6 {
+		grid-area: foto6;
+		display: grid;
+	}
+
+	.foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img, .foto6 img {
+		margin: auto;
+		width: 90%;
+		height: 90%;
+	}
+
+	.enviarFoto {
+		grid-area: enviarFoto;
+		display: grid;
+	}
+
+	.enviarFoto--titulo {
+		display: flex;
+		justify-content: center;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.enviarFoto--envio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.enviarFoto--envio input {
+		font-family: 'Montserrat', sans-serif;
+		margin: 10px;
+		font-weight: bold;
+	}
+
+	.pie {
+		grid-area: logoFooter;
+	}
+
+	/*-------------------Contacto-------------------*/
+
+	.gridContacto {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre" 
+		"encabezado"
+		"tituloPrincipal"
+		"formulario"
+		"ubicacion"
+		"logoFooter";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.logoNombre {
+		grid-area: logoNombre;
+	}
+
+	.encabezado {
+		grid-area: encabezado;
+	}
+
+	.principalContacto {
+		grid-area: tituloPrincipal;
+		display: flex;
+	    align-items: center;
+	    flex-direction: column;
+	}
+
+	.principalContacto--titulosecundario {
+		font-family: 'Cinzel', serif;
+		font-size: 35px;
+		color: #117A65;
+	}
+
+	.principalContacto--subtitulo {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.contacto {
+		display: flex;
+    	flex-direction: column;
+	}
+
+	.contacto--form {
+		display: grid;
+	    margin: auto;
+	    grid-row-gap: 10px;
+	}
+
+	.contacto input {
+		height: 20px;
+		width: 200px;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 5px;
+		border-style: none;
+		margin: auto;
+	}
+
+	.contacto textarea {
+		width: 200px;
+		height: 80px;
+		border-radius: 5px;
+		border-style: none;
+		font-family: 'Montserrat', sans-serif;
+		resize: none;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	.contacto--suscripcion {
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 10px;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.contacto--boton {
+		height: 30px;
+		width: 80px;
+		font-family: 'Montserrat';
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: #117A65;
+		border-radius: 5px;
+		margin-top: 20px;
+	}
+
+	.contactoUbicacion {
+		grid-area: ubicacion;
+		display: grid;
+		margin: 20px;
+	}
+
+	.contactoUbicacion--datos {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 15px;
+	}
+
+	.contactoUbicacion--datos p {
+		margin: 5px;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.contactoUbicacion--mapa {
+		display: grid;
+		margin: 15px;
+	}
+
+	.contactoUbicacion--mapa iframe {
+		margin: auto;
+		width: 95%;
+	}
+
+	/*---------------------------Reservas------------------------------*/
+
+	.gridReservas {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre" 
+		"encabezado"
+		"tituloPrincipal"
+		"formulario"
+		"logoFooter";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.principalReservas {
+		grid-area: tituloPrincipal;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.principalReservas--titulosecundario {
+		font-family: 'Cinzel', serif;
+		font-size: 35px;
+		color: #9A7D0A;
+		font-weight: bold;
+	}
+
+	.principalReservas--subtitulo {
+		display: flex;
+	    flex-wrap: wrap;
+	    text-align: center;
+	    font-family: 'Montserrat';
+	}
+
+	.reservas {
+		display: grid;
+    	grid-row-gap: 10px;
+    	font-family: 'Montserrat', sans-serif;
+	}
+
+	.reservas--fecha {
+		display: flex;
+    	flex-direction: column;
+    	margin: auto;
+	}
+
+	.reservas--motivo {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas: 
+		"motivo ."
+		"inputCumpleaños cumpleaños"
+		"inputCena cena"
+		"inputEvento evento"
+		"inputOtro otro";
+		margin-bottom: 20px;
+	}
+
+	.reservas--motivo p {
+		grid-area: motivo;
+		justify-self: end;
+    	margin: 0 15px 0 0;
+	}
+
+	.cumpleaños {
+		grid-area: cumpleaños;
+	}
+
+	#cumpleaños {
+		grid-area: inputCumpleaños;
+	}
+
+	.cena {
+		grid-area: cena;
+	}
+
+	#cena {
+		grid-area: inputCena;
+	}
+
+	.evento {
+		grid-area: evento;
+	}
+
+	#evento {
+		grid-area: inputEvento;
+	}
+
+	.otro {
+		grid-area: otro;
+	}
+
+	#otro {
+		grid-area: inputOtro;
+	}
+
+	.reservas--motivo input {
+		justify-self: end;
+		margin: 0 5px 0 0
+	}
+
+	.reservas--cantidad, .reservas--telefono, .reservas--email {
+		display: flex;
+		justify-content: center;
+	}
+
+	#personas {
+		width: 50px;
+		margin-left: 10px;
+	}
+
+	#telefono, #email, #personas {
+		font-size: 14px;
+		border-radius: 3px;
+		border: hidden;
+		margin-left: 10px;
+	}
+
+	.reservas--boton {
+		display: grid;
+	    justify-content: center;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	}
+
+	.reservas--boton input {
+		height: 30px;
+		width: 80px;
+		font-family: 'Montserrat';
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: #9A7D0A;
+		border-radius: 5px;
+		border: hidden;
+	}
+
+/*------------------Carta-------------------*/
+
+	.gridCarta {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto auto;
+		grid-row-gap: 15px;
+		grid-template-areas: 
+		"logoNombre" 
+		"encabezado"
+		"tituloPrincipal"
+		"carta"
+		"delivery"
+		"logoFooter";
+		background: linear-gradient(#fefefe,#888888,#fefefe);
+	}
+
+	.principalCarta {
+		grid-area: tituloPrincipal;
+		display: flex;
+		justify-content: center;
+	}
+
+	.principalCarta h1 {
+		font-family: 'Cinzel', serif;
+		font-size: 35px;
+		color: #E74C3C;
+	}
+
+	.carta {
+		grid-area: carta;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto auto auto;
+		margin: 20px;
+		grid-row-gap: 20px;
+	}
+
+	.comidas--imagen img, .bebidas--imagen img, .postres--imagen img {
+		margin: auto;
+		width: 100%;
+		height: 100%;
+	}
+
+	.comidas--tabla, .bebidas--tabla, .postres--tabla {
+		width: 50%;
+		margin: auto;
+	}
+
+	.nombre {
+		width: 50%;
+		text-align: start;
+	}
+
+	.precios {
+		width: 50%;
+		text-align: end;
+	}
+
+	.comidasCarta, .bebidasCarta, .postresCarta {
+		display: flex;
+	    flex-direction: column;
+	    text-align: center;
+	    font-family: 'Montserrat', sans-serif;
+	}
+
+	.delivery {
+		grid-area: delivery;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 20px auto 20px auto;
+		font-family: 'Cinzel', serif;
+		color: #E74C3C;
+		font-size: 25px;
+	}
+}
+
+
