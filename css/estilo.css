@@ -85,11 +85,6 @@
 	    margin-top: 20px;
 	}
 
-	.principalIndex p {
-		grid-area: descripcion;
-		font-family: 'Montserrat', sans-serif;
-	}
-
 	.fotoBar {
 		grid-area: imagenBar;
 		display: grid;
@@ -601,6 +596,7 @@
 
 	.principalReservas--subtitulo {
 		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
 	}
 
 	.reservas {
